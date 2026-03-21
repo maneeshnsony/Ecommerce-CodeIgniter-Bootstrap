@@ -53,35 +53,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                             <div>
                                 <label for="firstNameInput" class="text-sm font-semibold text-slate-700"><?= lang('first_name') ?> (<sup><?= lang('requires') ?></sup>)</label>
-                                <input id="firstNameInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="first_name" value="<?= @$_POST['first_name'] ?>" type="text" placeholder="<?= lang('first_name') ?>">
+                                <input id="firstNameInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="first_name" value="<?= htmlspecialchars((string)($_POST['first_name'] ?? ''), ENT_QUOTES, 'UTF-8') ?>" type="text" placeholder="<?= lang('first_name') ?>">
                             </div>
                             <div>
                                 <label for="lastNameInput" class="text-sm font-semibold text-slate-700"><?= lang('last_name') ?> (<sup><?= lang('requires') ?></sup>)</label>
-                                <input id="lastNameInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="last_name" value="<?= @$_POST['last_name'] ?>" type="text" placeholder="<?= lang('last_name') ?>">
+                                <input id="lastNameInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="last_name" value="<?= htmlspecialchars((string)($_POST['last_name'] ?? ''), ENT_QUOTES, 'UTF-8') ?>" type="text" placeholder="<?= lang('last_name') ?>">
                             </div>
                             <div>
                                 <label for="emailAddressInput" class="text-sm font-semibold text-slate-700"><?= lang('email_address') ?> (<sup><?= lang('requires') ?></sup>)</label>
-                                <input id="emailAddressInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="email" value="<?= @$_POST['email'] ?>" type="text" placeholder="<?= lang('email_address') ?>">
+                                <input id="emailAddressInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="email" value="<?= htmlspecialchars((string)($_POST['email'] ?? ''), ENT_QUOTES, 'UTF-8') ?>" type="text" placeholder="<?= lang('email_address') ?>">
                             </div>
                             <div>
                                 <label for="phoneInput" class="text-sm font-semibold text-slate-700"><?= lang('phone') ?> (<sup><?= lang('requires') ?></sup>)</label>
-                                <input id="phoneInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="phone" value="<?= @$_POST['phone'] ?>" type="text" placeholder="<?= lang('phone') ?>">
+                                <input id="phoneInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="phone" value="<?= htmlspecialchars((string)($_POST['phone'] ?? ''), ENT_QUOTES, 'UTF-8') ?>" type="text" placeholder="<?= lang('phone') ?>">
                             </div>
                             <div class="md:col-span-2">
                                 <label for="addressInput" class="text-sm font-semibold text-slate-700"><?= lang('address') ?> (<sup><?= lang('requires') ?></sup>)</label>
-                                <textarea id="addressInput" name="address" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" rows="3"><?= @$_POST['address'] ?></textarea>
+                                <textarea id="addressInput" name="address" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" rows="3"><?= htmlspecialchars((string)($_POST['address'] ?? ''), ENT_QUOTES, 'UTF-8') ?></textarea>
                             </div>
                             <div>
                                 <label for="cityInput" class="text-sm font-semibold text-slate-700"><?= lang('city') ?> (<sup><?= lang('requires') ?></sup>)</label>
-                                <input id="cityInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="city" value="<?= @$_POST['city'] ?>" type="text" placeholder="<?= lang('city') ?>">
+                                <input id="cityInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="city" value="<?= htmlspecialchars((string)($_POST['city'] ?? ''), ENT_QUOTES, 'UTF-8') ?>" type="text" placeholder="<?= lang('city') ?>">
                             </div>
                             <div>
                                 <label for="postInput" class="text-sm font-semibold text-slate-700"><?= lang('post_code') ?></label>
-                                <input id="postInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="post_code" value="<?= @$_POST['post_code'] ?>" type="text" placeholder="<?= lang('post_code') ?>">
+                                <input id="postInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="post_code" value="<?= htmlspecialchars((string)($_POST['post_code'] ?? ''), ENT_QUOTES, 'UTF-8') ?>" type="text" placeholder="<?= lang('post_code') ?>">
                             </div>
                             <div class="md:col-span-2">
                                 <label for="notesInput" class="text-sm font-semibold text-slate-700"><?= lang('notes') ?></label>
-                                <textarea id="notesInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="notes" rows="3"><?= @$_POST['notes'] ?></textarea>
+                                <textarea id="notesInput" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="notes" rows="3"><?= htmlspecialchars((string)($_POST['notes'] ?? ''), ENT_QUOTES, 'UTF-8') ?></textarea>
                             </div>
                         </div>
 
@@ -89,7 +89,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
                                 <label class="text-sm font-semibold text-slate-700"><?= lang('discount_code') ?></label>
                                 <div class="mt-2 flex flex-col gap-2 sm:flex-row sm:items-center">
-                                    <input class="w-full flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="discountCode" value="<?= @$_POST['discountCode'] ?>" placeholder="<?= lang('enter_discount_code') ?>" type="text">
+                                    <input class="w-full flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-slate-900/10" name="discountCode" value="<?= htmlspecialchars((string)($_POST['discountCode'] ?? ''), ENT_QUOTES, 'UTF-8') ?>" placeholder="<?= lang('enter_discount_code') ?>" type="text">
                                     <a href="javascript:void(0);" class="inline-flex items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-900 ring-1 ring-inset ring-slate-200 hover:bg-slate-100" onclick="checkDiscountCode()">
                                         <?= lang('check_code') ?>
                                     </a>
